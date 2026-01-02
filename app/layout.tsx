@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Carlos Nexus Silva | CV Arcade",
-  description: "CV estilo arcade hecho con Next.js + Tailwind + Snake.",
+  title: "Carlos Silva | CV Arcade",
+  description: "CV estilo arcade hecho con Next.js + Tailwind",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

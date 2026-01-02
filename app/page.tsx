@@ -39,7 +39,7 @@ export default function ArcadeCV() {
   // ✅ TU IDENTIDAD (real + alias inventado)
   const profile = useMemo(
     () => ({
-      arcadeName: 'CARLOS "NEXUS" SILVA',
+      arcadeName: 'CARLOS SILVA CALDERON',
       realName: "Carlos Francisco Silva Calderón",
       title: "Arquitecto Digital & Constructor de Ecosistemas Educativos",
       tagline:
@@ -117,8 +117,12 @@ export default function ArcadeCV() {
           {/* HUD */}
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div className="flex items-start gap-4">
-              <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-cyan-300/25 to-fuchsia-400/20 shadow-neon ring-1 ring-cyan-300/40 flex items-center justify-center animate-floaty">
-                <span className="text-xl">🕹️</span>
+              <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-cyan-300/25 to-fuchsia-400/20 shadow-neon ring-1 ring-cyan-300/40 flex items-center justify-center animate-floaty overflow-hidden">
+                <img 
+                  src="/carlos-sticker.webp" 
+                  alt="Carlos Sticker" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <div
@@ -154,8 +158,7 @@ export default function ArcadeCV() {
               {screen === "about" && (
                 <ScreenWrap title="ABOUT" subtitle="De la construcción a construir EDUCA">
                   <p className="text-white/85 leading-relaxed">
-                    Soy <span className="text-cyan-200 font-bold">{profile.realName}</span>, conocido
-                    como <span className="text-fuchsia-300 font-bold">NEXUS</span>.
+                    Soy <span className="text-cyan-200 font-bold">{profile.realName}</span>,
                     Inicié mi camino en el sector <strong>construcción</strong>, donde aprendí ejecución real,
                     control y resultados.
                   </p>
@@ -253,10 +256,8 @@ export default function ArcadeCV() {
                     </p>
 
                     <div className="mt-4 grid gap-3 md:grid-cols-2">
-                      <ContactCard label="WhatsApp" value="+51 955 919 939" hint="Por Whatsapp" />
-                      <ContactCard label="Email" value="silvacalderoncarlos13@gmail.com" hint="Holi" />
-                      <ContactCard label="Web" value={profile.sites[0]} hint="" />
-                      <ContactCard label="Plataforma" value={profile.sites[1]} hint="" />
+                      <ContactCard label="WhatsApp" value="+51 955 919 939" hint="Mandame un Whatsapp" />
+                      <ContactCard label="Email" value="silvacalderoncarlos13@gmail.com" hint="Mandame un correo" />
                     </div>
                   </div>
 
@@ -297,27 +298,13 @@ export default function ArcadeCV() {
                   </p>
                 </PanelBox>
 
-                <PanelBox title="POWER-UP">
-                  <button
-                    className="btn-arcade w-full"
-                    onClick={() => {
-                      if (!muted) SFX.beep();
-                      setCoins((c) => clamp(c + 5, 0, 99));
-                      setXp((x) => x + 200);
-                      setLvl((l) => l + 1);
-                    }}
-                  >
-                    ⚡ BOOST (+XP)
-                  </button>
-                  <p className="mt-2 text-xs text-white/60">Solo para el feeling gamer</p>
-                </PanelBox>
               </div>
 
               <div className="mt-4 rounded-2xl bg-gradient-to-br from-cyan-300/10 to-fuchsia-400/10 p-4 ring-1 ring-white/10">
                 <p className="text-sm text-white/80">
                   “Construyo sistemas que convierten conocimiento en negocio.”
                 </p>
-                <p className="mt-2 text-xs text-white/60">— Carlos “Nexus” Silva</p>
+                <p className="mt-2 text-xs text-white/60">— Carlos Silva Calderon</p>
               </div>
             </aside>
           </div>
